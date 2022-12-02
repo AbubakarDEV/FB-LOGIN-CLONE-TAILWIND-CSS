@@ -2,40 +2,29 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container mt-48 flex items-center justify-center mx-auto ">
-      <div className="left w-1/2">
-        <img src="/fblogo.svg" className="w-80" />
-        <p className="text-3xl mx-8">
-          Facebook helps you connect and share with the people in your life.
-        </p>
+    <div className="navbar flex items-center justify-between">
+      <div className="flex items-center justify-center md:order-2">
+        <div className="hamburger mr-2 md:hidden">
+          <div className="line h-0.5 w-6 my-1 bg-black"></div>
+          <div className="line h-0.5 w-6 my-1 bg-black"></div>
+          <div className="line h-0.5 w-6 my-1 bg-black"></div>
+        </div>
+        <div className="search md:hidden">Search</div>
       </div>
-      <div className="right flex flex-col bg-white p-8 rounded-lg w-1/4 text-lg relative">
-        <input
-          className="px-4 h-12 outline-blue-600 my-2 border border-1 border-gray-200 rounded-lg"
-          type={"text"}
-          placeholder="Email"
-        />
-        <input
-          className="px-4 h-12 outline-blue-600 my-2 border border-1 border-gray-200 rounded-lg"
-          type={"password"}
-          placeholder="Password"
-        />
-        <button className="loginBtn bg-blue-600 hover:bg-blue-700 text-white py-2 my-2 rounded-lg font-bold text-xl">
-          Log In
-        </button>
-        <span className="text-blue-600 text-center text-sm my-2 cursor-pointer hover:underline">
-          Forgot password
-        </span>
-        <hr className="my-2" />
-        <button className="createBtn bg-green-600 hover:bg-green-700 text-white py-3 px-4 my-2 mx-auto rounded-lg  text-xl w-fit">
-          Create New account
-        </button>
-        <span className="absolute -bottom-10 text-sm">
-          <span className="font-bold hover:underline cursor-pointer">
-            Create a Page{" "}
-          </span>
-          for a celebrity, brand or business
-        </span>
+      <div className="logo text-center flex md:order-1">
+        <div>Microsoft</div>
+        <div className="features absolute bg-red-400  inset-0 md:flex md:mx-4 md:space-x-3 -translate-x-90">
+          <div className="fitem">Microsoft 365</div>
+          <div className="fitem">Office</div>
+          <div className="fitem">Windows</div>
+          <div className="fitem">Surface</div>
+          <div className="fitem">Xbox</div>
+        </div>
+      </div>
+
+      <div className="cart text-center md:order-3 flex">
+        <div className="search hidden md:block">All Microsoft SearchIcon</div>
+        <div>Cart Account</div>
       </div>
     </div>
   );
